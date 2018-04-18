@@ -4,14 +4,14 @@ using System.Linq;
 
 namespace Bowling.Domain
 {
-    public interface IFrameBuilder
+    public interface IFrameLinker
     {
-        BaseFrame BuildFrames(IEnumerable<int[]> points);
+        BaseFrame LinkFrames(IEnumerable<int[]> points);
     }
 
-    public class FrameBuilder : IFrameBuilder
+    public class FrameLinker : IFrameLinker
     {
-        public BaseFrame BuildFrames(IEnumerable<int[]> points)
+        public BaseFrame LinkFrames(IEnumerable<int[]> points)
         {
             var frames = points
                 .Select(data => FrameFactory.Create(data[0], data[1]))

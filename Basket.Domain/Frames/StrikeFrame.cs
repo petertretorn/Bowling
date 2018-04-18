@@ -2,7 +2,7 @@
 
 namespace Bowling.Domain
 {
-    public class StrikeFrame : BaseFrame
+    public class StrikeFrame : SpareFrame
     {
         public StrikeFrame(int first, int second) : base(first, second) { }
 
@@ -21,8 +21,6 @@ namespace Bowling.Domain
         }
 
         private bool IsDoubleStrike() => NextFrame.IsStrike();
-
-        private int ExstraShot => new Random().Next(0, 10);
 
         private int CalculateDoubleStrike()
         {

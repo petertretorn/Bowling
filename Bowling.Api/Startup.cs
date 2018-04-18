@@ -30,7 +30,7 @@ namespace Bowling.Api
             services.AddScoped<IBowlingApiService, BowlingApiService>();
             services.AddScoped<IApiService, ApiService>();
             services.AddScoped<IBowlingCalculator, BowlingCalculator>();
-            services.AddScoped<IFrameBuilder, FrameBuilder>();
+            services.AddScoped<IFrameLinker, FrameLinker>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

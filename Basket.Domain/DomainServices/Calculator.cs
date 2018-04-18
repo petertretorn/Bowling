@@ -5,16 +5,25 @@ namespace Bowling.Domain
 {
     public interface IBowlingCalculator
     {
-        int[] CalulatePoints(BaseFrame firstFrame);
+        int[] CalulatePoints(IEnumerable<int[]> scores);
     }
 
     public class BowlingCalculator : IBowlingCalculator
     {
-        public int[] CalulatePoints(BaseFrame firstFrame)
+        private IFrameLinker _linker;
+
+        public BowlingCalculator(IFrameLinker linker)
         {
+            _linker = linker;
+        }
+
+        public int[] CalulatePoints(IEnumerable<int[]> scores)
+        {
+            var firstFrameLink = _linker.LinkFrames(scores);
+
             var points = new List<int>();
 
-            for (BaseFrame currentFrame = firstFrame; currentFrame != null; currentFrame = currentFrame.NextFrame)
+            for (BaseFrame currentFrame = firstFrameLink; currentFrame != null; currentFrame = currentFrame.NextFrame)
             {
                 int newTotal = points.ElementAtOrDefault(points.Count() - 1) + currentFrame.Calculate();
 

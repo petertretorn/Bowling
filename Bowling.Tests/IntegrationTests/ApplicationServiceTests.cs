@@ -13,12 +13,9 @@ namespace Bowling.Tests
         public async Task Can_InVoke_Service()
         {
             var bowlingApi = new BowlingApiService(new ApiService());
+            var calculator = new BowlingCalculator(new FrameLinker());
 
-            var sut = new BowlingService(
-                bowlingApi,
-                new FrameBuilder(),
-                new BowlingCalculator()
-                );
+            var sut = new BowlingService(bowlingApi, calculator);
 
             var result = await sut.ValidateResults();
 
