@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Basket.Domain\Bowling.Domain.csproj" />
+    <ProjectReference Include="..\Bowling.Infrastructure\Bowling.Infrastructure.csproj" />
+    <ProjectReference Include="..\Bowling.Interfaces\Bowling.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
