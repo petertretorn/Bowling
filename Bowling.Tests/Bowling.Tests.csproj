@@ -53,10 +53,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataFetcherTests.cs" />
-    <Compile Include="ScoreTests.cs" />
+    <Compile Include="IntegrationTests\DataFetcherTests.cs" />
+    <Compile Include="UnitTests\ScoreTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ApplicationServiceTests.cs" />
+    <Compile Include="IntegrationTests\ApplicationServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Basket.Domain\Bowling.Domain.csproj">
@@ -66,6 +66,10 @@
     <ProjectReference Include="..\Bowling.ApplicationServices\Bowling.ApplicationServices.csproj">
       <Project>{a1c267dd-0e35-46f0-b6b2-c795a59b0db5}</Project>
       <Name>Bowling.ApplicationServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bowling.Dtos\Bowling.Dtos.csproj">
+      <Project>{9481E606-224B-45DC-8130-75AF1121B12F}</Project>
+      <Name>Bowling.Dtos</Name>
     </ProjectReference>
     <ProjectReference Include="..\Bowling.Infrastructure\Bowling.Infrastructure.csproj">
       <Project>{f0815752-5d81-4d25-affd-da65ed90a23d}</Project>

@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bowling.ApplicationServices;
 using Bowling.Infrastructure;
 using Bowling.Domain;
@@ -13,8 +12,10 @@ namespace Bowling.Tests
         [TestMethod]
         public async Task Can_InVoke_Service()
         {
+            var bowlingApi = new BowlingApiService(new ApiService());
+
             var sut = new BowlingService(
-                new DataService(),
+                bowlingApi,
                 new FrameBuilder(),
                 new BowlingCalculator()
                 );

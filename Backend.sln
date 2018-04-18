@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowling.Infrastructure", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowling.ApplicationServices", "Bowling.ApplicationServices\Bowling.ApplicationServices.csproj", "{A1C267DD-0E35-46F0-B6B2-C795A59B0DB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowling.Dtos", "Bowling.Dtos\Bowling.Dtos.csproj", "{9481E606-224B-45DC-8130-75AF1121B12F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowling.Api", "Bowling.Api\Bowling.Api.csproj", "{A4161076-A0B3-4B10-84A1-094263842A9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{A1C267DD-0E35-46F0-B6B2-C795A59B0DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1C267DD-0E35-46F0-B6B2-C795A59B0DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1C267DD-0E35-46F0-B6B2-C795A59B0DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9481E606-224B-45DC-8130-75AF1121B12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9481E606-224B-45DC-8130-75AF1121B12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9481E606-224B-45DC-8130-75AF1121B12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9481E606-224B-45DC-8130-75AF1121B12F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4161076-A0B3-4B10-84A1-094263842A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4161076-A0B3-4B10-84A1-094263842A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4161076-A0B3-4B10-84A1-094263842A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4161076-A0B3-4B10-84A1-094263842A9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Basket.Domain\Bowling.Domain.csproj" />
+    <ProjectReference Include="..\Bowling.Dtos\Bowling.Dtos.csproj" />
   </ItemGroup>
 
 </Project>

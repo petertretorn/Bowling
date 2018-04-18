@@ -1,9 +1,7 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
+﻿using Bowling.Dtos;
+using Bowling.Infrastructure;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
-using Bowling.Infrastructure;
 
 namespace Bowling.Tests
 {
@@ -17,7 +15,7 @@ namespace Bowling.Tests
         [TestMethod]
         public async Task Can_Call_External_Api()
         {
-            var sut = new DataService();
+            var sut = new ApiService();
 
             var result = await sut.FetchData<BowlingResponse>("http://13.74.31.101/api/points");
 

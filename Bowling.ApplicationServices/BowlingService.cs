@@ -1,33 +1,32 @@
 ﻿using Bowling.Domain;
-using Bowling.Infrastructure;
-using Bowling.Infrastructure.Dtos;
+using Bowling.Dtos;
 using Bowling.Interfaces;
 using System;
 using System.Threading.Tasks;
 
 namespace Bowling.ApplicationServices
 {
-    public class BowlingService
+    public class BowlingService : IBowlingService
     {
         private const string url = "http://13.74.31.101/api/points";
 
-        private IDataService _dataFetcher;
+        private IBowlingApiService _bowlingApi;
         private IFrameBuilder _builder;
         private IBowlingCalculator _calculator;
 
         public BowlingService(
-            IDataService fetcher, 
+            IBowlingApiService bowlingApi, 
             IFrameBuilder frameBuilder, 
             IBowlingCalculator calculator)
         {
-            _dataFetcher = fetcher;
+            _bowlingApi = bowlingApi;
             _builder = frameBuilder;
             _calculator = calculator;
         }
 
         public async Task<ViewData> ValidateResults()
         {
-            var response = await _dataFetcher.FetchData<BowlingResponse>(url);
+            var response = await _bowlingApi.GetResults();
 
             var token = response.Token;
             var scores = response.Points;
@@ -42,7 +41,7 @@ namespace Bowling.ApplicationServices
                 token = token
             };
 
-            var result = await _dataFetcher.PostData<ValidationPayload, ValidationResponse>(payload, url);
+            var result = await _bowlingApi.ValidateCalculations(payload);
 
             return new ViewData()
             {

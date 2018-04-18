@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Bowling.Infrastructure
+namespace Bowling.Dtos
 {
     public class BowlingResponse
     {

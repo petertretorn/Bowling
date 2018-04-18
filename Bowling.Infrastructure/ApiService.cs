@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bowling.Infrastructure
 {
-    public class DataService: IDataService
+    public class ApiService: IApiService
     {
         public async Task<Response> FetchData<Response>(string url)
         {

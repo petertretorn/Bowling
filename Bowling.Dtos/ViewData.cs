@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bowling.Infrastructure.Dtos
+namespace Bowling.Dtos
 {
     public class ViewData
     {
