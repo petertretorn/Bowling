@@ -1,6 +1,6 @@
 # Bowling
 
-Requires Node and .NET Core 2.1
+Requires Node and .NET Core 2
 
 To run outside Visual Studio from root of solution type following commands:
 
