@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  bowling-api:
+    image: petertretorn/bowling
+    ports:
+      - "8080:80"
+      - "1025:1025"
+
