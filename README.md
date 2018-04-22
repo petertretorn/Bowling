@@ -1,6 +1,12 @@
 # Bowling
 
-## Docker image
+## Run With Docker
+
+### With docker-compose:
+
+* docker-compose up  (access localhost:8080)
+
+### From image:
 
 https://hub.docker.com/r/petertretorn/bowling/
 
