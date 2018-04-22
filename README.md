@@ -1,18 +1,16 @@
-# Bowling
+## Bowling
 
-## Run With Docker
-
-### With docker-compose:
+### docker-compose:
 
 * docker-compose up  (access localhost:8080)
 
-### From image:
+### Docker image:
 
 https://hub.docker.com/r/petertretorn/bowling/
 
 usage: docker --rm -p 8080:80 petertretorn/bowling (access localhost:8080)
 
-## Run locally
+### Run locally
 
 Requires Node and .NET Core 2
 
